@@ -6,6 +6,9 @@ import 'components/custom_app_bar.dart';
 import 'components/main_texts.dart';
 
 class HomeScreen extends StatefulWidget {
+  final Function drawerCallback;
+
+  const HomeScreen({Key key, @required this.drawerCallback}) : super(key: key);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -20,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CustomAppBar(),
+              CustomAppBar(widget.drawerCallback),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

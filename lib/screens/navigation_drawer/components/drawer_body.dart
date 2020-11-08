@@ -84,6 +84,16 @@ class DrawerBody extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              Divider(
+                color: white,
+              ),
+              Row(
+                children: [
+                  Icon(Icons.logout, color: yellow,),
+                  SizedBox(width: 10,),
+                  Text('Logout', style: TextStyle(color: white),)
+                ],
               )
             ],
           ),
