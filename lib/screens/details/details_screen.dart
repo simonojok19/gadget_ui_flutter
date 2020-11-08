@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gadgets_store_app/models/best_selling_product_model.dart';
 import 'package:gadgets_store_app/screens/details/components/custom_app_bar.dart';
 
+import 'components/product_features.dart';
 import 'components/product_name_and_image.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -20,6 +21,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
         children: [
           CustomAppBar(),
           ProductNameAndImages(
+            bestSellingProductModel: widget.bestSellingProductModel,
+          ),
+          ProductFeatures(
             bestSellingProductModel: widget.bestSellingProductModel,
           )
         ],
