@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gadgets_store_app/constants/constants.dart';
 import 'package:gadgets_store_app/screens/home/home_screen.dart';
+import 'package:gadgets_store_app/screens/navigation_drawer/navigation_drawer_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: white
       ),
-      home: HomeScreen(),
+      home: NavigationDrawerScreen(),
     );
   }
 }
