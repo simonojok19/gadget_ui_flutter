@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gadgets_store_app/constants/constants.dart';
+import 'package:gadgets_store_app/screens/home/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: white
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomeScreen(),
     );
   }
 }
