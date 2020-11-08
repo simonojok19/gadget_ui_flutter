@@ -27,7 +27,14 @@ class _NavigationDrawerScreenState extends State<NavigationDrawerScreen> with Si
     return Scaffold(
       body: Stack(
         children: [
-          DrawerBody(),
+          DrawerBody(closeDrawerCallback: () {
+            if(drawerOpen) {
+              setState(() {
+                drawerOpen = false;
+                _animationController.reverse();
+              });
+            }
+          },),
           AnimatedPositioned(
               child: ScaleTransition(
                 scale: _scaleAnimation,

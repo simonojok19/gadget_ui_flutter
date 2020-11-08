@@ -3,6 +3,9 @@ import 'package:flutter/painting.dart';
 import 'package:gadgets_store_app/constants/constants.dart';
 
 class DrawerBody extends StatelessWidget {
+  final Function closeDrawerCallback;
+
+  const DrawerBody({Key key, @required this.closeDrawerCallback}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,7 +23,9 @@ class DrawerBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(Icons.clear_rounded, color: white,),
+              InkWell(
+                onTap: closeDrawerCallback,
+                  child: Icon(Icons.clear_rounded, color: white,)),
               Text(
                 'Hello, \nEster Namalwa',
                 style: TextStyle(
