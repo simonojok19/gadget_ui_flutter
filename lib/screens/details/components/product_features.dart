@@ -72,6 +72,37 @@ class _ProductFeaturesState extends State<ProductFeatures> {
                   buildFeatureContainer(size, Icons.bluetooth_audio_rounded, widget.bestSellingProductModel.bluetooth.toString()),
                   buildFeatureContainer(size, Icons.volume_up_rounded, widget.bestSellingProductModel.sound.toString())
                 ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(right: appPadding / 2),
+                      height: size.height * 0.1,
+                      decoration: BoxDecoration(
+                        color: red,
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('\$', style: TextStyle(color: white, fontSize: 15),),
+                          Text('${widget.bestSellingProductModel.price}', style: TextStyle(color: white, fontSize: 26, fontWeight: FontWeight.w600),),
+                          Text(' + Add To Cart', style: TextStyle(color: yellow, fontSize: 16, fontWeight: FontWeight.w600),),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: size.width * 0.2,
+                    height: size.height * 0.1,
+                    decoration: BoxDecoration(
+                      color: white,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Icon(Icons.shopping_basket_rounded, size: 40,),
+                  )
+                ],
               )
             ],
           ),
