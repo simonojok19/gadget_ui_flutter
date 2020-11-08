@@ -44,12 +44,12 @@ class BestSellingProducts extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: Image(
-                width: size.width * 0.24,
+                width: size.width * 0.20,
                 fit: BoxFit.cover,
                 image: AssetImage(bestSellingProductModel.imageUrl),
               ),
             ),
-            SizedBox(width: 5,),
+            // SizedBox(width: 1,),
             Container(
               width: size.width * 0.24,
               child: Column(
