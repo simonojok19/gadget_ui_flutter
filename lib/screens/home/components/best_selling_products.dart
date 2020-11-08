@@ -10,7 +10,7 @@ class BestSellingProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.2,
+      height: size.height * 0.25,
       width: size.width,
       child: ListView.builder(
         physics: BouncingScrollPhysics(),
@@ -44,12 +44,12 @@ class BestSellingProducts extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: Image(
-                width: size.width * 0.20,
+                width: size.width * 0.25,
                 fit: BoxFit.cover,
                 image: AssetImage(bestSellingProductModel.imageUrl),
               ),
             ),
-            // SizedBox(width: 1,),
+            SizedBox(width: 5,),
             Container(
               width: size.width * 0.24,
               child: Column(

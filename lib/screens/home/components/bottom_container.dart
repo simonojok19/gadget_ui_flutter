@@ -18,7 +18,7 @@ class BottomContainer extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(
           top: appPadding,
-          left: appPadding
+          left: appPadding / 2
         ),
         child: Column(
           children: [
