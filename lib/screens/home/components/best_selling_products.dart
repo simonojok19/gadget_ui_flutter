@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gadgets_store_app/constants/constants.dart';
 import 'package:gadgets_store_app/data/data.dart';
 import 'package:gadgets_store_app/models/best_selling_product_model.dart';
+import 'package:gadgets_store_app/screens/details/details_screen.dart';
 import 'package:gadgets_store_app/screens/home/widgets/star_rating.dart';
 
 class BestSellingProducts extends StatelessWidget {
@@ -108,14 +109,23 @@ class BestSellingProducts extends StatelessWidget {
                   StarRating(
                     rating: bestSellingProductModel.rating,
                   ),
-                  Container(
-                    width: size.width * 0.12,
-                    height: size.height * 0.06,
-                    decoration: BoxDecoration(
-                      color: red,
-                      borderRadius: BorderRadius.circular(10)
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (_) => DetailsScreen(
+                          bestSellingProductModel: bestSellingProductModel
+                        )
+                      ));
+                    },
+                    child: Container(
+                      width: size.width * 0.12,
+                      height: size.height * 0.06,
+                      decoration: BoxDecoration(
+                        color: red,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Icon(Icons.arrow_forward_rounded, color: white,),
                     ),
-                    child: Icon(Icons.arrow_forward_rounded, color: white,),
                   )
                 ],
               ),
