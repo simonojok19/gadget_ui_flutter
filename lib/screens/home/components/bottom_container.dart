@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:gadgets_store_app/constants/constants.dart';
+import 'package:gadgets_store_app/screens/home/components/best_selling_products.dart';
 import 'package:gadgets_store_app/screens/home/components/popular_products.dart';
 
 class BottomContainer extends StatelessWidget {
