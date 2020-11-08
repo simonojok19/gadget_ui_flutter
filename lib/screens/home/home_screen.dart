@@ -13,7 +13,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          BackgroundImage()
+          BackgroundImage(),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CustomAppBar()
+            ],
+          )
         ],
       ),
     );
