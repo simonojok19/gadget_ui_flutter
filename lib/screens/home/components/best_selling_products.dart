@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gadgets_store_app/constants/constants.dart';
 import 'package:gadgets_store_app/data/data.dart';
@@ -31,7 +32,84 @@ class BestSellingProducts extends StatelessWidget {
       ),
       child: Container(
         width: size.width * 0.8,
-        color: brown,
+        padding: EdgeInsets.all(appPadding / 3),
+        decoration: BoxDecoration(
+          color: brown,
+          borderRadius: BorderRadius.circular(20)
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(15),
+              child: Image(
+                width: size.width * 0.24,
+                fit: BoxFit.cover,
+                image: AssetImage(bestSellingProductModel.imageUrl),
+              ),
+            ),
+            SizedBox(width: 5,),
+            Container(
+              width: size.width * 0.24,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    bestSellingProductModel.name,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  Text(
+                    bestSellingProductModel.description,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        '\$',
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            color: white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text(
+                        '${bestSellingProductModel.price}',
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            color: white,
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Container(
+              width: size.width * 0.24,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
