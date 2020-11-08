@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'components/background_image.dart';
+import 'components/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
