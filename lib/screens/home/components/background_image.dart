@@ -7,7 +7,7 @@ class BackgroundImage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       child: Image(
-        height: size.height * 0.55,
+        height: size.height * 0.5,
         fit: BoxFit.cover,
         image: AssetImage('assets/images/headmain.jpg'),
       ),
