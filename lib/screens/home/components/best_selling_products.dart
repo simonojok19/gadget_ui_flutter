@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gadgets_store_app/constants/constants.dart';
 import 'package:gadgets_store_app/data/data.dart';
+import 'package:gadgets_store_app/models/best_selling_product_model.dart';
 
 class BestSellingProducts extends StatelessWidget {
   @override
@@ -19,5 +21,18 @@ class BestSellingProducts extends StatelessWidget {
     );
   }
 
-  Widget _buildBestSellingProduct(BuildContext context, int index) {}
+  Widget _buildBestSellingProduct(BuildContext context, int index) {
+    Size size = MediaQuery.of(context).size;
+    BestSellingProductModel bestSellingProductModel = bestSellingProductsList[index];
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        vertical: appPadding / 2,
+        horizontal: appPadding / 3,
+      ),
+      child: Container(
+        width: size.width * 0.8,
+        color: brown,
+      ),
+    );
+  }
 }
