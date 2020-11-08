@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/background_image.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
