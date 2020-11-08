@@ -51,9 +51,6 @@ class _CustomAppBarState extends State<CustomAppBar> {
               ),
             ],
           ),
-          decoration: BoxDecoration(
-            color: Colors.red
-          ),
         )
     );
   }
