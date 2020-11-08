@@ -42,7 +42,8 @@ class BottomContainer extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            PopularProducts()
           ],
         ),
       ),
