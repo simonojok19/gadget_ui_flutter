@@ -43,7 +43,12 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     )
                   ]
                 ),
-              )
+              ),
+              Icon(
+                Icons.search_off_rounded,
+                color: white,
+                size: 25,
+              ),
             ],
           ),
         )
