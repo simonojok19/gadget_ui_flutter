@@ -18,7 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CustomAppBar()
+              CustomAppBar(),
+              Column(
+                children: [
+                  BottomContainer()
+                ],
+              )
             ],
           )
         ],
