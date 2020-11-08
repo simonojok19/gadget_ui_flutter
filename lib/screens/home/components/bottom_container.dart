@@ -44,7 +44,32 @@ class BottomContainer extends StatelessWidget {
                 ],
               ),
             ),
-            PopularProducts()
+            PopularProducts(),
+            Padding(
+              padding: EdgeInsets.only(
+                right: appPadding,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Best Selling',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    '01/06',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            BestSellingProducts(),
           ],
         ),
       ),
