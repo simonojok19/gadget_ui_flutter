@@ -28,12 +28,28 @@ class PopularProducts extends StatelessWidget {
       child: Stack(
         children: [
           _buildDiscount(size, popularProductModel),
+          _buildYellowCircle(size),
           _buildPriceCard(size, popularProductModel),
           _buildImageCard(size, popularProductModel),
 
         ],
       ),
     );
+  }
+
+  Positioned _buildYellowCircle(Size size) {
+    return Positioned(
+          left: size.width * 0.02,
+          top: size.height * 0.1,
+          child: Container(
+            width: size.width * 0.05,
+            height: size.height * 0.05,
+            decoration: BoxDecoration(
+                color: yellow,
+                shape: BoxShape.circle
+            ),
+          ),
+        );
   }
 
   Positioned _buildImageCard(Size size, PopularProductModel popularProductModel) {
