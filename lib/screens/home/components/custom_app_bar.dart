@@ -15,7 +15,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
         child: Container(
-          height: size.height * 0.1,
+          height: size.height * 0.12,
           padding: EdgeInsets.all(appPadding),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

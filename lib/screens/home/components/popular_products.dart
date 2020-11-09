@@ -122,7 +122,7 @@ class PopularProducts extends StatelessWidget {
   Positioned _buildDiscount(Size size, PopularProductModel popularProductModel) {
     return Positioned(
           right: size.width * 0.04,
-          bottom: size.height * 0.11,
+          bottom: size.height * 0.12,
           child: Container(
             width: size.width * 0.05,
             height: size.height * 0.05,

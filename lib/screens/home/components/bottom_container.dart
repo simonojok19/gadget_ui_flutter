@@ -9,7 +9,7 @@ class BottomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.55,
+      height: size.height * 0.56,
       // height is 0.55
       decoration: BoxDecoration(
         color: white,
